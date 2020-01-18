@@ -64,6 +64,7 @@ public class SocialApplication extends WebSecurityConfigurerAdapter {
 
 	@RequestMapping({ "/user", "/me" })
 	public Map<String, String> user(Principal principal) {
+		System.out.println("\nPrincipal\n" + principal + "\n");
 		Map<String, String> map = new LinkedHashMap<>();
 		map.put("name", principal.getName());
 		return map;
